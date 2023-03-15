@@ -30,6 +30,9 @@ public function show(int $id)
 
     public function store(Request $request)
     {
-        dd($request);
+       $dados = $request->except('_token');
+        Client::create($dados);
+        return redirect('/clients');
+        //dd($request);
     }
 }

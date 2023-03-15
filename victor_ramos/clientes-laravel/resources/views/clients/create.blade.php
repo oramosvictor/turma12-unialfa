@@ -19,6 +19,10 @@
           <br>
           <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Seu endereço">
           <br>
+          <label for="nada" class="from-label">Nada</label>
+          <br>
+          <input type="text" class="form-control" id="nada" name="nada" placeholder="Isso aqui num é nada!">
+          <br>
           <label for="observacao" class="from-label">Observação</label>
           <br>
           <textarea class="form-control" name="observacao" id="observacao" cols="30" rows="10"></textarea>
