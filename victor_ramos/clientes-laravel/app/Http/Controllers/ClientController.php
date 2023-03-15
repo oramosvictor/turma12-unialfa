@@ -23,4 +23,13 @@ public function show(int $id)
         'client' => $client
     ]);
 }
+    public function create()
+    {
+        return view('clients.create');
+    }
+
+    public function store(Request $request)
+    {
+        dd($request);
+    }
 }
