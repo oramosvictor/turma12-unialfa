@@ -3,14 +3,14 @@
 @section('title','Lista de Clientes')
 @section('content')
         <div class="card-header">
-          Lista de Clientes
+          Lista de Produtos
         </div>
         <table class = "table">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Endereço</th>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Descrição</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,20 +24,6 @@
                             </a>
                             </th>
                         <th scope="row">{{ $client ->endereco }}</th>
-                        <td>
-                          <a class="btn btn-primary" href="{{ route('clients.edit',$client) }}">
-                            Editar
-                          </a>
-                        </td>
-
-                        <td>
-                        <form action="{{route('clients.destroy',$client)}}" method="POST">
-                                @method('DELETE') 
-                                {{-- esse @method delete faz com que o formulário seja enviado como delete --}}
-                                @csrf
-                                <button type="button" class="btn btn-danger" type="submit" onclick="return confirm('Vai apagar mesmo, vacilão?')">Apagar</button>
-                            </form>
-                        </td>
 
                     </tr>
                 @endforeach
@@ -48,4 +34,7 @@
           Novo Cliente
         </a>
 
+        <a class="btn btn-success" href="{{ route('clients.create')}}">
+          Novo Produto
+        </a>
 @endsection

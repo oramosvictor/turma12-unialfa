@@ -10,7 +10,7 @@
 
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">L.E.P.C.E</a>
+    <a class="navbar-brand" href="/clients">L.E.P.C.E</a>
   </div>
 </nav>
 <br>

@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title','Adicionar Cliente')
+@section('title','Editar Cliente')
 @section('content')
 
 <form action="{{ route('clients.store') }}" method="POST">
@@ -8,12 +8,14 @@
     @csrf
 
     <div class="card-header">
-          <strong>Novo cliente</strong>
+          <strong>Editar Cliente</strong>
           <br>
           <br>
           <label for="nome" class="from-label">Nome</label>
           <br>
-          <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do cliente">
+          <input type="text" class="form-control" id="nome" name="nome" 
+          placeholder="Nome do cliente" value="{{$client->endereco}}">
+          
           <br>
           <label for="endereco" class="from-label">Endereço</label>
           <br>

@@ -18,4 +18,8 @@ Route::get ('/clients', [ClientController::class, 'index'])-> name('clients.inde
 Route::get('/clients/create',[ClientController::class,'create'])->name('clients.create');
 Route::get ('/clients/{id}', [ClientController::class, 'show'])->name('clients.show');
 
+Route::get('/clients/{id}/edit',[ClientController::class,'edit'])->name('clients.edit');
 Route::post('/clients', [ClientController::class, 'store'])-> name('clients.store');
+
+
+Route::delete ('/clients/{id}', [ClientController::class, 'destroy'])->name('clients.destroy');
