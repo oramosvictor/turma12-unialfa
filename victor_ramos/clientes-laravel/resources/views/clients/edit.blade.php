@@ -4,7 +4,7 @@
 @section('content')
 
 <form action="{{ route('clients.store') }}" method="POST">
-    
+
     @csrf
 
     <div class="card-header">
@@ -15,7 +15,6 @@
           <br>
           <input type="text" class="form-control" id="nome" name="nome" 
           placeholder="Nome do cliente" value="{{$client->endereco}}">
-          
           <br>
           <label for="endereco" class="from-label">Endereço</label>
           <br>

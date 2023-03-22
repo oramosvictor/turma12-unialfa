@@ -45,6 +45,17 @@ public function show(int $id)
         //dd($request);
     }
 
+    public function update(int $id, Request $request)
+    {
+        $client = Client::find($id);
+        $client->update([
+            'nome' => $request->nome,
+            'endereco' => $request->endereco,
+            'observacao' => $request->observacao
+        ]);
+        return redirect('/clients');
+    }
+
     //Mostra o formulário de editar um determinado cliente 
 
     public function edit(int $id)
@@ -56,7 +67,7 @@ public function show(int $id)
         ]);
     }
     // Deleta um cliente específico 
-    
+
     public function destroy(int $id)
     {
         $client = Client::find($id);
